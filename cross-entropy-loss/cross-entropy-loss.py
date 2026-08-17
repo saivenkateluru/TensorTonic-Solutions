@@ -9,4 +9,5 @@ def cross_entropy_loss(y_true, y_pred):
     y_true = np.asarray(y_true, dtype = int)
     prob_pred = np.asarray(y_pred, dtype = float)
     avg_ce_loss = -1 * np.mean(np.log(prob_pred[np.arange(len(y_true)),y_true]))
+    #If needed np.clip(prob_pred[np.arange(len(y_true)),y_true],1e-5,1.0)
     return avg_ce_loss
